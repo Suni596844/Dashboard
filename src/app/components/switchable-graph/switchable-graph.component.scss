@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.switchable-graph {
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+ 
+  border-radius: 8px;
+  background: #fff;
+
+  .graph-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+
+    .graph-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .graph-tabs {
+      button {
+        background: none;
+        border: none;
+        font-size: 0.9rem;
+        margin-left: 10px;
+        cursor: pointer;
+        padding: 4px;
+        color: gray;
+      }
+      button.active {
+        color: green;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .chart-container {
+    height: 160px;
+    position: relative;
+  }
+}

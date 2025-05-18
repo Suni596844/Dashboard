@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+.header {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 700; /* Bold overall */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+
+  /* Left Side */
+  .header-left {
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      
+      i {
+        font-size: 1.2rem;
+        color: #4caf50; /* Green tone */
+      }
+      
+      .username {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #333;
+      }
+    }
+  }
+
+  /* Center - Dashboard / Overview starts at 27% */
+  .header-center {
+    flex: 1;
+    padding-left: 8%;
+    text-align: left;
+    
+    .dashboard-title {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      
+      /* Outlined star: transparent fill with gray stroke */
+      .outlined-star {
+        font-size: 1rem;
+        color: transparent;
+        -webkit-text-stroke: 0.8px gray;
+      }
+      
+      .title-text {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #333;
+      }
+    }
+  }
+
+  /* Right Side */
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    .search-bar {
+      input {
+        padding: 4px 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        font-weight: 700;
+      }
+    }
+    
+    .header-icons {
+      display: flex;
+      gap: 10px;
+      
+      .icon-item {
+        cursor: pointer;
+        color: #555;
+        font-size: 1rem;
+        font-weight: 700;
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+  }
+}

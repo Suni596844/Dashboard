@@ -1,0 +1,89 @@
+// Theme Variables
+$primary-color: #007BFF;
+$hover-color: darken($primary-color, 10%);
+$border-color: #ddd;
+
+.best-selling-products {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+  h2 {
+    text-align: center;
+    color: $primary-color;
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+
+  .carousel-container {
+    overflow: hidden; // Hide any overflowing slides
+    border: 2px solid $border-color;
+    border-radius: 8px;
+    background: #fff;
+    padding: 10px;
+  }
+
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .product-card {
+    flex: 0 0 33.3333%; // Show 3 cards per view
+    padding: 10px;
+    box-sizing: border-box;
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    .product-info {
+      text-align: center;
+      margin-top: 10px;
+
+      h4 {
+        font-size: 1.2rem;
+        margin: 5px 0;
+        color: $primary-color;
+      }
+
+      p {
+        font-size: 1rem;
+        color: $hover-color;
+        margin: 5px 0;
+      }
+
+      .rating {
+        color: #FFD700;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .carousel-controls {
+    text-align: center;
+    margin-top: 10px;
+
+    // Only one arrow button is shown (for next)
+    .next {
+      background-color: $primary-color;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: background 0.3s ease;
+      &:hover {
+        background-color: $hover-color;
+      }
+      // Center the button below the carousel
+      margin: 0 auto;
+      display: inline-block;
+    }
+  }
+}

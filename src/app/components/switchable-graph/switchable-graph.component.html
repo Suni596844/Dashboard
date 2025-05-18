@@ -1,0 +1,18 @@
+<div class="switchable-graph">
+  <div class="graph-header">
+    <div class="graph-title">
+    
+    </div>
+    <div class="graph-tabs">
+      <button [class.active]="selectedTab==='thisYear'" (click)="switchTab('thisYear')">
+        &#9679; This Year
+      </button>
+      <button [class.active]="selectedTab==='lastYear'" (click)="switchTab('lastYear')">
+        &#9679; Last Year
+      </button>
+    </div>
+  </div>
+  <div class="chart-container">
+    <canvas #chartCanvas></canvas>
+  </div>
+</div>

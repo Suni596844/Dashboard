@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.sidebar {
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+  background: #fff;
+  color: #000;
+
+  .points-section {
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-bottom: 10px;
+      
+      li {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  
+  .sidebar-header {
+    margin-bottom: 10px;
+    
+    .dashboard-label {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #555;
+    }
+  }
+  
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+    
+    .menu-item {
+      display: flex;
+      align-items: center;
+      padding: 5px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background 0.3s;
+      margin-bottom: 5px;
+      
+      &:hover {
+        background: #e0e0e0;
+      }
+      
+      .menu-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        border: 1px solid black;
+        border-radius: 50%;
+        margin-right: 8px;
+        
+        i {
+          font-size: 0.8rem;
+          color: #555;
+        }
+      }
+      
+      .menu-text {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+.pages-section {
+  margin-top: 20px;
+
+  .menu-heading {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #555;;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .menu-item {
+      font-size: 0.85rem;
+      font-weight: 400;
+      margin-bottom: 8px;
+
+      a {
+        text-decoration: none;
+        color: #555;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px;
+        border-radius: 4px;
+
+        &:hover {
+          background: #f0f0f0;
+        }
+
+        i {
+          font-size: 1rem;
+        }
+      }
+
+      &.expandable > a {
+        justify-content: space-between;
+      }
+
+      .submenu-list {
+        list-style: none;
+        padding-left: 15px;
+        margin-top: 6px;
+
+        .submenu-item {
+          margin-bottom: 5px;
+
+          a {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: #777;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px;
+            border-radius: 4px;
+
+            &:hover {
+              background: #eef;
+            }
+
+            i {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

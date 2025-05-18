@@ -1,0 +1,33 @@
+<div class="products-container">
+  <!-- Header Row -->
+  <div class="product-header">
+    <div class="header-left">
+      <h6>Product</h6>
+    </div>
+    <div class="header-right">
+      <span class="header-item">Date</span>
+      <span class="header-item">Amount</span>
+      <span class="header-item">Status</span>
+      <span class="more-options">&#8942;</span>
+    </div>
+  </div>
+  
+  <!-- List of Product Rows -->
+  <div class="products-list">
+    <div class="product-row" *ngFor="let product of products">
+      <div class="product-info">
+        <p class="product-title">{{ product.info }}</p>
+        <div class="product-user">
+          <img class="user-icon" [src]="product.avatarUrl" alt="User Icon" />
+          <span class="username">{{ product.username }}</span>
+        </div>
+      </div>
+      <div class="product-date">{{ product.date }}</div>
+      <div class="product-amount">{{ product.amount }}</div>
+      <div class="product-status" 
+           [ngClass]="{'in-progress': product.status==='In Progress', 'complete': product.status==='Complete', 'pending': product.status==='Pending'}">
+        {{ product.status }}
+      </div>
+    </div>
+  </div>
+</div>
