@@ -1,1 +1,8 @@
-<p>tasks works!</p>
+<section class="tasks-and-conversations">
+  <div class="tasks-container">
+    <h4 class="section-title">Tasks</h4>
+    <div class="tasks-list">
+      <div class="task" *ngFor="let task of tasks">&bull; {{ task }}</div>
+    </div>
+  </div>
+</section>

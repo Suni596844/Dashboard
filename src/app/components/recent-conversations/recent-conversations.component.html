@@ -1,1 +1,19 @@
-<p>recent-conversations works!</p>
+<section class="conversations-container">
+  <h4 class="section-title">Recent Conversation</h4>
+  <div class="conversation-list">
+    <div *ngFor="let message of messages" [ngClass]="{'user': message.sender === 'user', 'assistant': message.sender === 'assistant'}" class="conversation">
+      <div class="avatar">
+        <img [src]="message.sender === 'user' ? 'https://via.placeholder.com/40?text=U' : 'https://via.placeholder.com/40?text=A'" alt="User Icon">
+      </div>
+      <div class="bubble">
+        <p>{{ message.text }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chat Typing Bar -->
+  <div class="chat-input-bar">
+    <input type="text" [(ngModel)]="userMessage" placeholder="Type your message..." />
+    <button class="send-btn" (click)="sendMessage()">Send</button>
+  </div>
+</section>
